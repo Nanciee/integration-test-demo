@@ -21,6 +21,7 @@
             </fieldset>
             <fieldset class="form-group">
               <input
+                data-cy="email-input"
                 formControlName="email"
                 placeholder="Email"
                 class="form-control form-control-lg"
@@ -28,12 +29,13 @@
             </fieldset>
             <fieldset class="form-group">
               <input
+                data-cy="password-input"
                 formControlName="password"
                 placeholder="Password"
                 class="form-control form-control-lg"
                 type="password" />
             </fieldset>
-            <button class="btn btn-lg btn-primary pull-xs-right" [disabled]="!authForm.valid" type="submit">
+            <button data-cy="auth-submit" class="btn btn-lg btn-primary pull-xs-right" [disabled]="!authForm.valid" type="submit">
               {{ title }}
             </button>
           </fieldset>

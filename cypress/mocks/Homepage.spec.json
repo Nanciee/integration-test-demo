@@ -1,0 +1,103 @@
+{
+  "should show posts from users I am following": [
+    {
+      "url": "http://localhost:4200/sockjs-node/info?t=1568261533811",
+      "method": "GET",
+      "status": 200,
+      "headers": {},
+      "body": null,
+      "response": {
+        "websocket": true,
+        "origins": [
+          "*:*"
+        ],
+        "cookie_needed": false,
+        "entropy": 776276773
+      }
+    },
+    {
+      "url": "https://conduit.productionready.io/api/users/login",
+      "method": "POST",
+      "status": 200,
+      "headers": {},
+      "body": {
+        "user": {
+          "email": "nancy.du@rangle.io",
+          "password": "12345678"
+        }
+      },
+      "response": {
+        "user": {
+          "id": 43150,
+          "email": "nancy.du@rangle.io",
+          "createdAt": "2018-11-26T14:31:33.031Z",
+          "updatedAt": "2018-11-26T14:31:33.038Z",
+          "username": "nanciee",
+          "bio": null,
+          "image": null,
+          "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDMxNTAsInVzZXJuYW1lIjoibmFuY2llZSIsImV4cCI6MTU3MzQ0NTUzN30.n9UAXkrvmS0gnQ34do8equPPmdbDkTXRererH1JJvu0"
+        }
+      }
+    },
+    {
+      "url": "https://conduit.productionready.io/api/tags",
+      "method": "GET",
+      "status": 200,
+      "headers": {},
+      "body": null,
+      "response": {
+        "tags": [
+          "butt",
+          "dragons",
+          "test",
+          "training",
+          "tags",
+          "as",
+          "coffee",
+          "animation",
+          "flowers",
+          "cars",
+          "baby",
+          "money",
+          "caramel",
+          "happiness",
+          "japan",
+          "clean",
+          "sugar",
+          "sushi",
+          "cookies",
+          "well"
+        ]
+      }
+    },
+    {
+      "url": "https://conduit.productionready.io/api/articles/feed?limit=10&offset=0",
+      "method": "GET",
+      "status": 200,
+      "headers": {},
+      "body": null,
+      "response": {
+        "articles": [
+          {
+            "title": "Hello Assert(JS)!",
+            "slug": "hello-assert-js-2vjcry",
+            "body": "Test",
+            "createdAt": "2019-09-12T02:37:08.246Z",
+            "updatedAt": "2019-09-12T02:37:08.246Z",
+            "tagList": [],
+            "description": "Test",
+            "author": {
+              "username": "nancy",
+              "bio": null,
+              "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+              "following": true
+            },
+            "favorited": false,
+            "favoritesCount": 2
+          }
+        ],
+        "articlesCount": 1
+      }
+    }
+  ]
+}
